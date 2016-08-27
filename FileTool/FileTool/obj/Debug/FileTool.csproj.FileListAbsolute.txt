@@ -1,0 +1,8 @@
+D:\Documents\GitHub\FileTool\FileTool\FileTool\obj\Debug\FileTool.Properties.Resources.resources
+D:\Documents\GitHub\FileTool\FileTool\FileTool\obj\Debug\FileTool.csproj.GenerateResource.Cache
+D:\Documents\GitHub\FileTool\FileTool\FileTool\bin\Debug\FileTool.dll
+D:\Documents\GitHub\FileTool\FileTool\FileTool\bin\Debug\FileTool.pdb
+D:\Documents\GitHub\FileTool\FileTool\FileTool\bin\Debug\WinAPI.pdb
+D:\Documents\GitHub\FileTool\FileTool\FileTool\bin\Debug\WinAPI.xml
+D:\Documents\GitHub\FileTool\FileTool\FileTool\obj\Debug\FileTool.dll
+D:\Documents\GitHub\FileTool\FileTool\FileTool\obj\Debug\FileTool.pdb

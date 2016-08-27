@@ -32,7 +32,7 @@ namespace FileTool
             {
                 foreach (IniFileKeys k in ar_inifilekey)
                 {
-                    _list.Add( new ThreadGradeData(f.ToString(),k.ToString(),  SetFileControl.GetIniFileInfo(f.ToString(), k.ToString())));
+                    //_list.Add( new ThreadGradeData(f.ToString(),k.ToString(),  SetFileControl.GetIniFileInfo(f.ToString(), k.ToString())));
                 }
             }
         }
@@ -132,4 +132,3 @@ namespace FileTool
         邮政编码
     }
     }
-}
