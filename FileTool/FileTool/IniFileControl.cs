@@ -4,9 +4,16 @@ using System.Text;
 
 namespace FileTool
 {
+    /// <summary>
+    /// 操作ini文件类
+    /// </summary>
     public class IniFileControl
     {
         private string _filePath = null;
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="filePath">需要输入文件绝对位置</param>
         public IniFileControl(string filePath)
         {
             this._filePath = filePath;

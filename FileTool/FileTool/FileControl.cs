@@ -7,13 +7,17 @@ using IWshRuntimeLibrary;
 
 namespace FileTool
 {
+    /// <summary>
+    /// 对文件操作的类   包括快捷键
+    /// </summary>
     public class FileControl
     {
         /// <summary>
         /// 拷贝文件夹下面的全部东西到另外一个里面
         /// </summary>
-        /// <param name="srcdir"></param>
-        /// <param name="desdir"></param>
+        /// <param name="srcdir">源文件夹</param>
+        /// <param name="desdir">目标文件夹</param>
+        /// <param name="exceptdir">排除的文件夹名称</param>
         public void CopyDirectory(string srcdir, string desdir, string exceptdir)
         {
             DirectoryInfo di = new DirectoryInfo(srcdir);
