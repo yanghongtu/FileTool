@@ -53,7 +53,7 @@ namespace FileTool
         /// <summary>
         /// win7开机启动位置
         /// </summary>
-        const string win7startupPath = @"C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup";
+        public const string win7startupPath = @"C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup";
         /// <summary>
         /// 在dirpath文件夹里面 查找包含
         /// </summary>
