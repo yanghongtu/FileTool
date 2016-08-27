@@ -22,7 +22,7 @@ namespace ToolHelper
         {
             bool result=false;
             ManagementObject mo = null;
-            ManagementObjectCollection moc = this.mc_Win32_NetworkAdapter.GetInstances();
+            ManagementObjectCollection moc = this.GetWin32_NetworkAdapter().GetInstances();
             foreach (ManagementObject item in moc)
             {
                 if (item["NetConnectionID"] != null && item["NetConnectionID"].ToString().Trim() == name)
@@ -32,7 +32,7 @@ namespace ToolHelper
                 }
             }
             string Description = mo["Name"].ToString().Trim();
-            ManagementObjectCollection moc_config = this.mc_Win32_NetworkAdapterConfiguration.GetInstances();
+            ManagementObjectCollection moc_config = this.GetWin32_NetworkAdapterConfiguration().GetInstances();
             foreach (ManagementObject item in moc_config)
             {
                 if (item["Description"] != null && item["Description"].ToString().Trim() == Description)
@@ -40,9 +40,15 @@ namespace ToolHelper
                     string[] temp_ip = new string[] {ip};
                     string[] temp_netsub = new string[] { netsub};
 
-                    item.InvokeMethod("EnableStatic", new object[] { temp_ip, temp_netsub });
+                    if ((UInt32)item.InvokeMethod("EnableStatic", new object[] { temp_ip, temp_netsub }) != 0)
+                    {
+                        return false;
+                    }
                     string[] temp_gateway = new string[] { gateway};
-                    item.InvokeMethod("SetGateways", new object[] { temp_gateway });
+                    if ((UInt32)item.InvokeMethod("SetGateways", new object[] { temp_gateway }) != 0)
+                    {
+                        return false;
+                    }
                 }
             }
 
@@ -60,7 +66,7 @@ namespace ToolHelper
         public bool EnableOrDisableAdapter(string name,bool isEnable)
         {
             ManagementObject mo = null;
-            ManagementObjectCollection moc = this.mc_Win32_NetworkAdapter.GetInstances();
+            ManagementObjectCollection moc = this.GetWin32_NetworkAdapter().GetInstances();
             foreach (ManagementObject item in moc)
             {
                 if (item["NetConnectionID"] != null && item["NetConnectionID"].ToString().Trim() == name)
@@ -94,7 +100,7 @@ namespace ToolHelper
         public bool IsEnableAdapter(string name)
         {
             ManagementObject mo = null;
-            ManagementObjectCollection moc = this.mc_Win32_NetworkAdapter.GetInstances();
+            ManagementObjectCollection moc = this.GetWin32_NetworkAdapter().GetInstances();
             foreach (ManagementObject item in moc)
             {
                 if (item["NetConnectionID"] != null && item["NetConnectionID"].ToString().Trim() == name)
@@ -137,10 +143,18 @@ namespace ToolHelper
         /// </summary>
         public void Dispose()
         {
-            this.mc_Win32_NetworkAdapter.Dispose();
-            this.mc_Win32_NetworkAdapter = null;
-            this.mc_Win32_NetworkAdapterConfiguration.Dispose();
-            this.mc_Win32_NetworkAdapterConfiguration = null;
+            if (this.mc_Win32_NetworkAdapter!=null)
+            {
+                this.mc_Win32_NetworkAdapter.Dispose();
+                this.mc_Win32_NetworkAdapter = null;
+            }
+
+            if (this.mc_Win32_NetworkAdapterConfiguration!=null)
+            {
+                this.mc_Win32_NetworkAdapterConfiguration.Dispose();
+                this.mc_Win32_NetworkAdapterConfiguration = null;
+            }
+            
 
         }
 

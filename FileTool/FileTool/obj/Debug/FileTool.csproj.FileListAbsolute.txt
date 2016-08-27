@@ -6,5 +6,3 @@ D:\Documents\GitHub\FileTool\FileTool\FileTool\obj\Debug\FileTool.pdb
 D:\Documents\GitHub\FileTool\FileTool\FileTool\obj\Debug\ToolHelper.Properties.Resources.resources
 D:\Documents\GitHub\FileTool\FileTool\FileTool\bin\Debug\FileTool.XML
 D:\Documents\GitHub\FileTool\FileTool\FileTool\obj\Debug\FileTool.csprojResolveAssemblyReference.cache
-D:\Documents\GitHub\FileTool\FileTool\FileTool\bin\Debug\WinAPI.pdb
-D:\Documents\GitHub\FileTool\FileTool\FileTool\bin\Debug\WinAPI.xml
