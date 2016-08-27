@@ -1,0 +1,8 @@
+D:\Documents\GitHub\FileTool\FileTool\FileTool\bin\Debug\WinAPI.XML
+D:\Documents\GitHub\FileTool\FileTool\FileTool\bin\Debug\WinAPI.dll
+D:\Documents\GitHub\FileTool\FileTool\FileTool\bin\Debug\WinAPI.pdb
+D:\Documents\GitHub\FileTool\FileTool\WinAPI\obj\Debug\WinAPI.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\FileTool\FileTool\WinAPI\obj\Debug\WinAPI.Properties.Resources.resources
+D:\Documents\GitHub\FileTool\FileTool\WinAPI\obj\Debug\WinAPI.csproj.GenerateResource.Cache
+D:\Documents\GitHub\FileTool\FileTool\WinAPI\obj\Debug\WinAPI.dll
+D:\Documents\GitHub\FileTool\FileTool\WinAPI\obj\Debug\WinAPI.pdb
