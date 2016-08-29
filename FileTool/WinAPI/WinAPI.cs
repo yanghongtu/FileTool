@@ -241,5 +241,23 @@ namespace WinAPI
 
 
         //*************************************************************************************
+        /// <summary>
+        /// 发送arp数据包
+        /// </summary>
+        /// <param name="dest">目的地地址</param>
+        /// <param name="host">发送给别人 可以不填</param>
+        /// <param name="mac">返回的mac地址</param>
+        /// <param name="length">返回的长度</param>
+        /// <returns></returns>
+        [DllImport("Iphlpapi.dll")]
+        private static extern int SendARP(Int32 dest, Int32 host, ref Int64 mac, ref Int32 length);
+        /// <summary>
+        /// 把字符串形式的ip地址转换为整数形式的网络字节序
+        /// </summary>
+        /// <param name="ip">字符串形式的ip地址</param>
+        /// <returns></returns>
+        [DllImport("Ws2_32.dll")]
+        private static extern Int32 inet_addr(string ip); 
+
     }
 }
